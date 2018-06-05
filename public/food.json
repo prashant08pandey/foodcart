@@ -1,0 +1,122 @@
+[
+	{
+		"item": "Burger",
+		"selected":0,
+		"imagepath": "http://www.readersdigest.ca/wp-content/uploads/2015/11/gourmet-burger.jpg",
+		"ingredients":[{
+				"name": "Buns"
+			},
+			{
+				"name":"potato"
+				}],
+		"price":"120"		
+	},
+	{
+		"item": "Pizza",
+		"selected":0,
+		"imagepath": "https://www.cicis.com/media/1176/pizza_trad_pepperonibeef.png",
+		"ingredients":[{
+				"name": "Pizza Base" 
+			},
+			{
+				"name":"cheese"
+				}],
+		"price":"350"		
+	},
+	{
+		"item": "Pav Bhaji",
+		"selected":0,
+		"imagepath": "https://i.ytimg.com/vi/JrRYk1ObIX4/hqdefault.jpg",
+		"ingredients":[{
+				"name": "Buns"
+			},
+			{
+				"name":"Bhaji"
+				}],
+		"price":"80"		
+	},
+	{
+		"item": "Idli Sambhar",
+		"selected":0,
+		"imagepath": "http://i2.wp.com/yummilyyours.com/wp-content/uploads/2013/12/DSC_0506.jpg",
+		"ingredients":[{
+				"name": "Rawa"
+			},
+			{
+				"name":"Sambhar"
+				}],
+		"price":"90"		
+	},
+	{
+		"item": "Cold Coffee",
+		"selected":0,
+		"imagepath": "http://sherebengal.com/wp-content/uploads/2017/09/cold-coffee-with-ice-cream.jpg",
+		"ingredients":[{
+				"name": "Milk"
+			},
+			{
+				"name":"Coffee"
+				}],
+		"price":"60"		
+	},
+	{
+		"item": "Sandwich",
+		"selected":0,
+		"imagepath": "http://www.saladworks.com/sites/default/files/Sandwich-AvocadoBLT.jpg",
+		"ingredients":[{
+				"name": "Bread"
+			},
+			{
+				"name":"vegetables"
+				}],
+		"price":"50"		
+	},
+	{
+		"item": "Virgin Mojito",
+		"selected":0,
+		"imagepath": "http://www.thetummyfiller.com/wp-content/uploads/2017/04/Virgin-mojito.jpg",
+		"ingredients":[{
+				"name": "Mint Soda"
+			},
+			{
+				"name":"White Rum"
+				}],
+		"price":"220"		
+	},
+	{
+		"item": "Fried Rice",
+		"selected":0,
+		"imagepath": "https://www.seriouseats.com/recipes/images/2016/01/20160206-fried-rice-food-lab-68-1500x1125.jpg",
+		"ingredients":[{
+				"name": "Rice"
+			},
+			{
+				"name":"vegetables"
+				}],
+		"price":"70"		
+	},
+	{
+		"item": "Chilli Potato",
+		"selected":0,
+		"imagepath": "https://5.imimg.com/data5/HI/XR/GLADMIN-43146858/crispy-chilli-potato-500x500.png",
+		"ingredients":[{
+				"name": "Potato"
+			},
+			{
+				"name":"Chilli Sauce"
+				}],
+		"price":"40"		
+	},
+	{
+		"item": "Rolls",
+		"selected":0,
+		"imagepath": "https://b.zmtcdn.com/data/pictures/5/70695/c2468a93fe5815836392a76b1460fb36_featured_v2.jpg",
+		"ingredients":[{
+				"name": "Roll"
+			},
+			{
+				"name":"Filling"
+				}],
+		"price":"60"		
+	}
+]
