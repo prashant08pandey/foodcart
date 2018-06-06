@@ -7,18 +7,28 @@ angular.module('cart',['ngRoute'])
 	});
 }])
 
-.controller('cartCtrl', ['$scope','$http', function($scope,$http){
-	$http.get('public/food.json').then(function(res){
-		$scope.foodData = res.data;
-	})
+.controller('cartCtrl', ['$scope','$http', 'CommonService', function($scope,$http, CommonService){
+	$scope.foodData = CommonService.getItems();
+
+	if(!$scope.foodData){
+		$http.get('public/food.json').then(function(res){
+			$scope.foodData = res.data;
+		});
+	}
 
 	$scope.total = function(){
 		var t = 0;
 		for(var k in $scope.foodData){
-			t += parseInt($scope.foodData[k].selected);
+			t += parseInt($scope.foodData[k].checked);
 		}
-		return t;
+		CommonService.setTotal(t);
+
+		return CommonService.getTotal();
 	}
+
+	$scope.$watch('foodData', function(){
+		CommonService.setItems($scope.foodData);
+	})
 }])
 
 .directive('checkList', function(){
@@ -28,7 +38,7 @@ angular.module('cart',['ngRoute'])
 			ingredients: '=',
 			imagepath: '=',
 			price: "=",
-			selected: "="
+			checked: "="
 		},
 		template: function(elem, attr){
 			return '<div class="panel-body">\
@@ -46,9 +56,29 @@ angular.module('cart',['ngRoute'])
 						</div>\
 						</div>\
 							<div class="radio">\
-								<label><input type="radio" ng-value="{{price}}" ng-model="$parent.selected">Add to cart</label>\
+								<label><input type="radio" ng-value="{{price}}" ng-model="checked"><strong>Add to cart</strong></label>\
 							</div>\
 						</div>'	
 		}
 	};
+})
+
+.service('CommonService', function(){
+	var items = '';
+	var Total = 0;
+
+	return{
+		getItems: function(){
+			return items;
+		},
+		setItems: function(value){
+			items= value;
+		},
+		getTotal: function(){
+			return Total;
+		},
+		setTotal: function(value){
+			Total = value;
+		}
+	}
 })

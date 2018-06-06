@@ -1,0 +1,32 @@
+<div class="container" ng-controller="checkoutCtrl">
+	<div class="page-header">
+		<h3>checkout page</h3>
+	</div>
+	<div class="well">
+		<table class="table table-striped">
+			<thead>
+				<th>Item</th>
+				<th>Price</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="i in checkedItems" ng-if="i.checked != 0">
+					<td>{{i.item}}</td>
+					<td>{{i.checked}}</td>
+				</tr>
+				<tr>
+					<td><strong>Total:</strong></td>
+					<td><strong>{{checkoutTotal}}</strong></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="row">	
+		<div class="text-left" class="col col-xs-12 col-sm-12 col-md-6 col-lg-6">
+			<a href="#!/cart" class="btn btn-danger btn-lg btn-block">Edit Cart</a>
+		</div>
+		<br>
+		<div class="col col-xs-12 col-sm-12 col-md-6 col-lg-6">
+			<button class="btn btn-success btn-lg btn-block" ng-click="confirmCheckout()">Confirm Checkout</button>
+		</div>
+	</div>
+</div>
